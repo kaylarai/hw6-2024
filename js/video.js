@@ -22,22 +22,22 @@ document.querySelector("#pause").addEventListener("click", function() {
 });
 
 document.querySelector("#slower").addEventListener("click", function() {
-	video.playbackRate *= 0.95;
+	video.playbackRate *= 0.90;
 	console.log("New speed is " + video.playbackRate);
 });
 
 document.querySelector("#faster").addEventListener("click", function() {
-	video.playbackRate /= 0.95;
+	video.playbackRate /= 0.90;
 	console.log("New speed is " + video.playbackRate);
 });
 
 document.querySelector("#skip").addEventListener("click", function() {
-	if (video.currentTime + 15 > video.duration) {
+	if (video.currentTime + 10 > video.duration) {
 		video.currentTime = 0;
 		console.log("Going back to beginning");
 	} else {
-		video.currentTime += 15;
-		console.log("Skipping ahead 15 seconds");
+		video.currentTime += 10;
+		console.log("Skipping ahead 10 seconds");
 	}
 });
 
@@ -63,6 +63,6 @@ document.querySelector("#vintage").addEventListener("click", function() {
 	video.classList.add("oldSchool");
 });
 
-document.querySelector("#vintage").addEventListener("click", function() {
+document.querySelector("#orig").addEventListener("click", function() {
 	video.classList.remove("oldSchool");
 });
